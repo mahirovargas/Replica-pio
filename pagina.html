@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eTicket Clon</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-image: url('img/banner.jpg');
+      background-size: cover;
+      color: #fff;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    footer {
+      background-color: #001f3f;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    
+    .highlight-box {
+      background-color: #add8e6; 
+      border-radius: 8px; 
+      padding: 1rem; 
+      margin: 1rem 0; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    }
+
+
+    #carouselExampleCaptions {
+      max-height: 500px; 
+      overflow: hidden; 
+    }
+
+    #carouselExampleCaptions img {
+      object-fit: cover; 
+      width: 100%; 
+      height: 100%; 
+    }
+
+   
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <img src="img/logo.png" alt="Logo" style="width: 120px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Conciertos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Deportes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Teatro</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Festivales</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#">Iniciar sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Carousel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/7.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="img/6.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="img/5.jpg" class="d-block w-100" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="img/9.jpg" class="d-block w-100" alt="Slide 4">
+    </div>
+    <div class="carousel-item">
+      <img src="img/241108154405586_performer_img2_CAT 2.jpg" class="d-block w-100" alt="Slide 5">
+    </div>
+    <div class="carousel-item">
+      <img src="img/centro.jpg" class="d-block w-100" alt="Slide 6">
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+  <!-- Botones en un cuadro resaltado -->
+  <section class="py-4">
+    <div class="container">
+      <div class="highlight-box d-flex flex-column flex-md-row justify-content-center align-items-center">
+        <!-- Botón desplegable -->
+        <div class="dropdown me-md-3 mb-3 mb-md-0">
+          <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="img/menu.png" alt="Menú" style="width: 20px; height: 20px;"> Opciones
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Conciertos</a></li>
+            <li><a class="dropdown-item" href="#">Deportes</a></li>
+            <li><a class="dropdown-item" href="#">Teatro</a></li>
+            <li><a class="dropdown-item" href="#">Festivales</a></li>
+          </ul>
+        </div>
+        <!-- Botones adicionales -->
+        <button class="btn btn-outline-dark mx-2" id="btnEventos">Todos los Eventos</button>
+        <button class="btn btn-outline-dark mx-2" id="btnColombia">Todo Colombia</button>
+        
+        <!-- Contenedor para eventos -->
+        <div id="eventosContainer" style="display:none;">
+          <ul>
+            <li>Festival Vallenato</li>
+            <li>Rock al Parque</li>
+            <li>Fiesta de la Independencia de Cúcuta</li>
+            <li>Feria de Cali</li>
+          </ul>
+        </div>
+        
+        <!-- Contenedor para municipios de Colombia -->
+        <div id="colombiaContainer" style="display:none;">
+          <ul>
+            <li>Bogotá</li>
+            <li>Medellín</li>
+            <li>Cali</li>
+            <li>Cartagena</li>
+            <li>Barranquilla</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Eventos en tu ciudad -->
+  <main class="container my-4">
+    <section class="mb-5">
+      <h2 class="text-center">Eventos en tu ciudad</h2>
+      <div class="row g-4">
+
+        <img src="img/centro.jpg">
+
+        <!-- Tarjetas -->
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img src="img/centro.jpg" class="card-img-top" alt="Evento 1">
+            <div class="card-body">
+              <h5 class="card-title">Don Maízar</h5>
+              <hr>
+              <h3>Bogotá</h3>
+              <hr>
+              <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img src="img/1.jpg" class="card-img-top" alt="Evento 1">
+            <div class="card-body">
+              <h5 class="card-title">JAISON NEUTRA</h5>
+              <hr>
+              <h3>Bogotá</h3>
+              <hr>
+              <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img src="img/10.jpg" class="card-img-top" alt="Evento 1">
+            <div class="card-body">
+              <h5 class="card-title">MIGUEL ANGEL VIVO</h5>
+              <hr>
+              <h3>Bogotá</h3>
+              <hr>
+              <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img src="img/11.jpg" class="card-img-top" alt="Evento 1">
+            <div class="card-body">
+              <h5 class="card-title">VALE GARZON</h5>
+              <hr>
+              <h3>Bogotá</h3>
+              <hr>
+              <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img src="img/12.jpg" class="card-img-top" alt="Evento 1">
+            <div class="card-body">
+              <h5 class="card-title">ANDREADE BOCELLI</h5>
+              <hr>
+              <h3>Bogotá</h3>
+              <hr>
+              <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-4">
+          <div class="card">
+            <img src="img/13.jpg" class="card-img-top" alt="Evento 1">
+            <div class="card-body">
+              <h5 class="card-title">ANDRES CEPEDA</h5>
+              <hr>
+              <h3>Bogotá</h3>
+              <hr>
+              <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+            </div>
+          </div>
+        </div>
+              
+              <div class="col-sm-6 col-md-4">
+                <div class="card">
+                  <img src="img/14.jpg" class="card-img-top" alt="Evento 1">
+                  <div class="card-body">
+                    <h5 class="card-title">APOLO 7</h5>
+                    <hr>
+                    <h3>Bogotá</h3>
+                    <hr>
+                    <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+                  </div>
+                </div>
+              </div>
+      
+      
+              <div class="col-sm-6 col-md-4">
+                <div class="card">
+                  <img src="img/15.jpg" class="card-img-top" alt="Evento 1">
+                  <div class="card-body">
+                    <h5 class="card-title">AVENTURA</h5>
+                    <hr>
+                    <h3>Bogotá</h3>
+                    <hr>
+                    <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="col-sm-6 col-md-4">
+                <div class="card">
+                  <img src="img/23.jpg" class="card-img-top" alt="Evento 1">
+                  <div class="card-body">
+                    <h5 class="card-title">BARRANQUILLA BRILLA CON ELITE</h5>
+                    <hr>
+                    <h3>Bogotá</h3>
+                    <hr>
+                    <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+                  </div>
+                </div>
+              </div>
+      
+      
+              <div class="col-sm-6 col-md-4">
+                <div class="card">
+                  <img src="img/4.jpg" class="card-img-top" alt="Evento 1">
+                  <div class="card-body">
+                    <h5 class="card-title">BRESH</h5>
+                    <hr>
+                    <h3>Bogotá</h3>
+                    <hr>
+                    <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-sm-6 col-md-4">
+                <div class="card">
+                  <img src="img/16.jpg" class="card-img-top" alt="Evento 1">
+                  <div class="card-body">
+                    <h5 class="card-title">DRUNK COMEDY</h5>
+                    <hr>
+                    <h3>Bogotá</h3>
+                    <hr>
+                    <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+                  </div>
+                </div>
+              </div>
+      
+      
+              <div class="col-sm-6 col-md-4">
+                <div class="card">
+                  <img src="img/17.jpg" class="card-img-top" alt="Evento 1">
+                  <div class="card-body">
+                    <h5 class="card-title">FERXXO</h5>
+                    <hr>
+                    <h3>Bogotá</h3>
+                    <hr>
+                    <a href="#" class="btn btn-primary btn-sm">Ver evento</a>
+                  </div>
+                </div>
+              </div>
+      
+      
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Sección de opciones principales -->
+        <div class="col-md-3">
+          <h5>Explora</h5>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Conciertos</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Teatro</a></li>
+            <li><a href="#">Culturales</a></li>
+            <li><a href="#">Comedia</a></li>
+            <li><a href="#">Familiares</a></li>
+            <li><a href="#">Congresos</a></li>
+            <li><a href="#">Festivales</a></li>
+          </ul>
+        </div>
+        
+        <!-- Sección de servicios -->
+        <div class="col-md-3">
+          <h5>Servicios</h5>
+          <ul>
+            <li><a href="#">¡Recoge tus boletos!</a></li>
+            <li><a href="#">Ubicación de Puntos de venta</a></li>
+            <li><a href="#">Suscríbete al boletín</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Vende tus boletos en eticket</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Comunicados</a></li>
+          </ul>
+        </div>
+  
+        <!-- Sección de políticas -->
+        <div class="col-md-3">
+          <h5>Políticas</h5>
+          <ul>
+            <li><a href="#">Políticas de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">PQRS</a></li>
+            <li><a href="#">PULEP</a></li>
+            <li><a href="#">SIC</a></li>
+          </ul>
+        </div>
+  
+        <!-- Sección de contacto y redes sociales -->
+<div class="col-md-3">
+  <h5>Contáctanos</h5>
+  <ul>
+    <li><a href="#">Atención Telefónica a Clientes</a></li>
+  </ul>
+  <h5>Síguenos</h5>
+  <ul class="social-icons">
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Instagram</a></li>
+    <li><a href="#">Facebook</a></li>
+  </ul>
+ 
+    <img src="https://i.pinimg.com/originals/6b/4c/53/6b4c53c16384d6e7fb8e8526a13a0913.gif" alt="GIF experiencia" style="width: 220px; height: auto; vertical-align: middle;">
+  </p>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
